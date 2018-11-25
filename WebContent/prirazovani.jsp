@@ -10,25 +10,7 @@
   </head>
   <body>
     <%@ include file="header.jsp" %>
-      <header>
-        <nav>
-          <ul>
-            <li class="logo">MemorIT</li>
-            <li class="aktivni">
-              <a href="index.html">Úvodní stránka</a></li>
-            <li class="aktivni">
-              <a href="seznamBalicku.html">Seznam balíčků</a></li>
-            <li class="aktivni">
-              <a href="karticky.jsp">Kartičky</a></li>
-            <li class="aktivni">
-              <a href="doplnovani.jsp">Doplňování</a></li>
-            <li class="aktivni">
-              <a href="prirazovani.jsp">Přiřazování</a></li>
-
-          </ul>
-        </nav>
-      </header>
-      
+           
       <p><span class="balicek">Název Balíčku</span></p>
       <div class="celyblok">
       <input class="inpucanvas"type="text" name="jmeno" size="2"> 
