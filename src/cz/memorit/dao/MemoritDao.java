@@ -22,6 +22,9 @@ public class MemoritDao {
 	private static final String LOADSEZNAMBALICKU = "SELECT * FROM Balicek";
 	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta) VALUES (?,?)";
 	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta";
+	private static final String LOADBALICEK = "SELECT * FROM Balicek WHERE id_balicek = ?";
+	private static final String LOADKARTICKA = "";
+	
 	
 	public void saveBalicek (Balicek novyBalicek) {
 		DataSource ds = getDataSource();
@@ -94,7 +97,50 @@ public class MemoritDao {
 		return ret;
 	}
 	
+	public Balicek loadBalicek(Integer id_balicek) {
+		DataSource ds = getDataSource();
+		try (Connection con = ds.getConnection();
+			PreparedStatement stmt = con.prepareStatement(LOADBALICEK)) {
+			stmt.setInt(1, id_balicek);
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				Balicek bal = new Balicek();
+				bal.setNazev_balicek(rs.getString("nazev_balicek"));
+				bal.setId_balicek(rs.getInt("id_balicek"));
+				return bal;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
+	public SeznamKarticek loadKarticka(Integer id_balicek, Integer pocet) {
+		SeznamKarticek ret = new SeznamKarticek();
+		ArrayList<Karticka> list = new ArrayList<>();
+		DataSource ds = getDataSource();
+		try (Connection con = ds.getConnection();
+				PreparedStatement stmt = con.prepareStatement(LOADKARTICKA)) {
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				Karticka kar = new Karticka();
+				kar.setFront_karta(rs.getString("front_karta"));
+				kar.setBack_karta(rs.getString("back_karta"));
+				kar.setId_balicek(rs.getInt("id_karta"));
+				list.add(kar);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		ret.setKartaList(list);
+		return ret;
+	
+		
+	}
+	
+
 	
 	private DataSource getDataSource( ) {
 		try {
