@@ -23,7 +23,7 @@ public class MemoritDao {
 	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta) VALUES (?,?)";
 	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta";
 	private static final String LOADBALICEK = "SELECT * FROM Balicek WHERE id_balicek = ?";
-	private static final String LOADKARTICKA = "";
+	private static final String LOADKARTICKA = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY RAND() LIMIT ?";
 	
 	
 	public void saveBalicek (Balicek novyBalicek) {
@@ -122,6 +122,8 @@ public class MemoritDao {
 		DataSource ds = getDataSource();
 		try (Connection con = ds.getConnection();
 				PreparedStatement stmt = con.prepareStatement(LOADKARTICKA)) {
+			stmt.setInt(1, id_balicek);
+			stmt.setInt(2, pocet);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Karticka kar = new Karticka();
