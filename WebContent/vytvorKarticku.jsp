@@ -17,6 +17,7 @@
       <p>Vytvoř kartičku</p>
       <p>Vlož do políček slova tak, jak patří dvojice k sobě</p>
       <form action="action" method="post">
+      
         <p><input type="text" name="front_karta" value=""/>
         <label name="front_karta">Co neumím</label>
         

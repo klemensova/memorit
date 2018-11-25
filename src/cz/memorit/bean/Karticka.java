@@ -1,7 +1,7 @@
 package cz.memorit.bean;
 
 public class Karticka {
-	private Integer id_katicka;
+	private Integer id_karticka;
 	private Integer id_balicek;
 	private String front_karta;
 	private String back_karta;
@@ -30,11 +30,11 @@ public class Karticka {
 		this.id_balicek = id_balicek;
 	}
 
-	public Integer getId_katicka() {
-		return id_katicka;
+	public Integer getId_karticka() {
+		return id_karticka;
 	}
 
-	public void setId_katicka(Integer id_katicka) {
-		this.id_katicka = id_katicka;
+	public void setId_karticka(Integer id_karticka) {
+		this.id_karticka = id_karticka;
 	}
 }
