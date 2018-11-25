@@ -15,11 +15,13 @@ import javax.sql.DataSource;
 import cz.memorit.bean.Balicek;
 import cz.memorit.bean.Karticka;
 import cz.memorit.bean.SeznamBalicku;
+import cz.memorit.bean.SeznamKarticek;
 
 public class MemoritDao {
 	private static final String INSERTBALICEK = "INSERT INTO Balicek(nazev_balicek) VALUES (?)";
-	private static final String LOADBALICEK = "SELECT * FROM Balicek";
-	private static final String INSERTKARTA = "INSERT INTO Karta(fron_karta, back_karta) VALUES (?,?)";
+	private static final String LOADSEZNAMBALICKU = "SELECT * FROM Balicek";
+	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta) VALUES (?,?)";
+	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta";
 	
 	public void saveBalicek (Balicek novyBalicek) {
 		DataSource ds = getDataSource();
@@ -35,12 +37,12 @@ public class MemoritDao {
 		}
 	}
 	
-	public SeznamBalicku load() {
+	public SeznamBalicku loadSeznamBalicku() {
 		SeznamBalicku ret = new SeznamBalicku();
 		ArrayList<Balicek> list = new ArrayList<>();
 		DataSource ds = getDataSource();
 		try (Connection con = ds.getConnection();
-				PreparedStatement stmt = con.prepareStatement(LOADBALICEK)) {
+				PreparedStatement stmt = con.prepareStatement(LOADSEZNAMBALICKU)) {
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Balicek bal = new Balicek();
@@ -70,7 +72,27 @@ public class MemoritDao {
 			e.printStackTrace();
 		}
 	}
-	
+	public SeznamKarticek loadSeznamKarticek() {
+		SeznamKarticek ret = new SeznamKarticek();
+		ArrayList<Karticka> list = new ArrayList<>();
+		DataSource ds = getDataSource();
+		try (Connection con = ds.getConnection();
+				PreparedStatement stmt = con.prepareStatement(LOADSEZNAMKARTICEK)) {
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				Karticka kar = new Karticka();
+				kar.setFront_karta(rs.getString("front_karta"));
+				kar.setBack_karta(rs.getString("back_karta"));
+				kar.setId_balicek(rs.getInt("id_karta"));
+				list.add(kar);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+		ret.setKartaList(list);
+		return ret;
+	}
 	
 	
 	
