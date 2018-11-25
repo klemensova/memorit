@@ -21,7 +21,7 @@ public class MemoritDao {
 	private static final String INSERTBALICEK = "INSERT INTO Balicek(nazev_balicek) VALUES (?)";
 	private static final String LOADSEZNAMBALICKU = "SELECT * FROM Balicek";
 	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta) VALUES (?,?)";
-	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta";
+	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta WHERE id_balicek = ?";
 	private static final String LOADBALICEK = "SELECT * FROM Balicek WHERE id_balicek = ?";
 	private static final String LOADKARTICKA = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY RAND() LIMIT ?";
 	
@@ -75,12 +75,13 @@ public class MemoritDao {
 			e.printStackTrace();
 		}
 	}
-	public SeznamKarticek loadSeznamKarticek() {
+	public SeznamKarticek loadSeznamKarticek(Integer id_balicek) {
 		SeznamKarticek ret = new SeznamKarticek();
 		ArrayList<Karticka> list = new ArrayList<>();
 		DataSource ds = getDataSource();
 		try (Connection con = ds.getConnection();
 				PreparedStatement stmt = con.prepareStatement(LOADSEZNAMKARTICEK)) {
+			stmt.setInt(1, id_balicek);
 			ResultSet rs = stmt.executeQuery();
 			while (rs.next()) {
 				Karticka kar = new Karticka();
