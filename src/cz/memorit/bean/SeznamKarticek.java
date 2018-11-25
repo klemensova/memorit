@@ -1,5 +1,16 @@
 package cz.memorit.bean;
 
-public class SeznamKarticek {
+import java.util.ArrayList;
 
+public class SeznamKarticek {
+	public ArrayList <String> kartaList;
+
+	public ArrayList<String> getKartaList() {
+		return kartaList;
+	}
+
+	public void setKartaList(ArrayList<String> kartaList) {
+		this.kartaList = kartaList;
+	}
+	
 }
