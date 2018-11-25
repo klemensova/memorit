@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seznam balíčků</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
   </head>
   <body>
-     <%@ include file="header.jsp" %> 
+    /* <%@ include file="header.jsp" %> */
     <header>
       <nav>
         <ul>
