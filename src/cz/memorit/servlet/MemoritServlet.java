@@ -7,10 +7,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cz.memorit.bean.Balicek;
+import cz.memorit.dao.MemoritDao;
+
 
 @WebServlet("/MemoritServlet")
 public class MemoritServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
        
   
     public MemoritServlet() {
@@ -19,7 +23,8 @@ public class MemoritServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
+		response.getWriter().append("ok");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

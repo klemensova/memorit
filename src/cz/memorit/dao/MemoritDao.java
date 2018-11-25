@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 import cz.memorit.bean.Balicek;
 
 public class MemoritDao {
-	private static final String INSERTBALICEK = "INSERT INTO BALICEK(nazev_balicek) VALUES (?)";
+	private static final String INSERTBALICEK = "INSERT INTO Balicek(nazev_balicek) VALUES (?)";
 	
 	public void saveBalicek (Balicek novyBalicek) {
 		DataSource ds = getDataSource();
@@ -22,7 +22,7 @@ public class MemoritDao {
 		{		
 			stmt.setString(1, novyBalicek.getNazev_balicek());
 			stmt.executeUpdate();
-			con.commit();
+			//con.commit();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
