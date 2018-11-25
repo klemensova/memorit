@@ -11,7 +11,6 @@ public class UlozitBalicekCtrl implements ControllerInterface {
 	
 	
 
-	@Override
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
 		String novyNazevBalicek = request.getParameter("nazev_balicek");
 		Balicek novyBalicek = new Balicek();

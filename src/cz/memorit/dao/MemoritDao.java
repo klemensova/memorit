@@ -13,11 +13,13 @@ import javax.sql.DataSource;
 
 
 import cz.memorit.bean.Balicek;
+import cz.memorit.bean.Karticka;
 import cz.memorit.bean.SeznamBalicku;
 
 public class MemoritDao {
 	private static final String INSERTBALICEK = "INSERT INTO Balicek(nazev_balicek) VALUES (?)";
 	private static final String LOADBALICEK = "SELECT * FROM Balicek";
+	private static final String INSERTKARTA = "INSERT INTO Karta(fron_karta, back_karta) VALUES (?,?)";
 	
 	public void saveBalicek (Balicek novyBalicek) {
 		DataSource ds = getDataSource();
@@ -53,6 +55,22 @@ public class MemoritDao {
 		ret.setBaliceklist(list);
 		return ret;
 	}
+	
+	public void saveKarticka (Karticka novaKarticka) {
+		DataSource ds = getDataSource();
+		
+		try (Connection con = ds.getConnection();
+				PreparedStatement stmt = con.prepareStatement(INSERTKARTA))
+		{		
+			stmt.setString(1, novaKarticka.getFront_karta());
+			stmt.setString(2, novaKarticka.getBack_karta());
+			stmt.executeUpdate();
+			//con.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	
 	
