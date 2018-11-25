@@ -10,26 +10,29 @@
   </head>
   <body>
 
-
+<form action="MemoritServlet" method="get">
     <header>
 
       <nav>
         <ul>
           <li class="logo">MemorIT</li>
           <li class="aktivni">
-            <a href="index.jsp">Úvodní stránka</a></li>
+            <button  name="action" value="">Úvodní stránka</button></li>
           <li class="aktivni">
-            <a href="seznamBalicku.jsp">Seznam balíčků</a></li>
+             <button name="action" value="vypisSeznam">Seznam balíčků</button></li>
           <li class="aktivni">
-            <a href="karticky.jsp">Kartičky</a></li>
+            <button  name="action" value="vyberKarticku">Kartičky</button></li>
           <li class="aktivni">
-            <a href="doplnovani.jsp">Doplňování</a></li>
+            <button  name="action" value="vyberKarticku">Doplňování</button></li>
           <li class="aktivni">
-            <a href="prirazovani.jsp">Přiřazování</a></li>
+            <button  name="action"value="vyberPetKarticek">Přiřazování</button></li>
 
         </ul>
       </nav>
+      <p>${session.getAttribute("nazev_balicek")}</p>
     </header>
-
+    
+    
+</form>
   </body>
 </html>
