@@ -17,7 +17,7 @@
         <ul>
           <li class="logo">MemorIT</li>
           <li class="aktivni">
-            <button  name="action" value="">Úvodní stránka</button></li>
+            <button  name="action" value="uvod">Úvodní stránka</button></li>
           <li class="aktivni">
              <button name="action" value="vypisSeznam">Seznam balíčků</button></li>
           <li class="aktivni">
