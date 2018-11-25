@@ -1,5 +1,5 @@
 package cz.memorit.bean;
 
-public class Balicek {
-	   
+public class Karticka {
+
 }
