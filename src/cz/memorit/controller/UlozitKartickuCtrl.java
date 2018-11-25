@@ -18,7 +18,7 @@ public class UlozitKartickuCtrl implements ControllerInterface {
 		novaKarticka.setId_balicek((Integer)request.getSession().getAttribute("id_balicek"));
 		instanceDao.saveKarticka(novaKarticka);
 		
-		return null;
+		return "/vytvorKarticku.jsp";
 	}
 
 }
