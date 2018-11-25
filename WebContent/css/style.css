@@ -1,0 +1,141 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color:white;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  
+}
+
+header {
+  height: 50px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+}
+nav ul li {
+  float: left;
+  padding: 0px 25px;
+  margin: 0px 5px;
+  font: 17px Verdana;
+  height: 50px;
+  line-height: 3em;
+  background-color: #034f84 ;
+
+
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: #92a8d1;
+}
+.logo {
+  background-color: darkmagenta;
+  color: white;
+  font: 35px Verdana;
+  height: 50px;
+  width: 200px;
+
+}
+.celyblok {
+  
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: antiquewhite;
+}
+
+p {
+  text-align: center;
+}
+.button {
+  background-color: #92a8d1;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: white;
+  float:right;
+ 
+  
+}
+.balicek {
+ 
+  padding: 0px 25px;
+  margin: 0px 5px;
+  font: 25px Verdana;
+  height: 80px;
+  line-height: 4em;
+  background-color: #92a8d1 ;
+  color: white;
+}
+
+ul  {
+    list-style-type: none;
+    margin: 0px;
+  }
+ul li {
+  padding: 0 25px;
+  margin: auto;
+  font: 17px Verdana;
+  height: 50px;
+  line-height: 3em;
+  background-color: #92a8d1 ;
+  color: white;
+ }
+
+.radekseznamu {
+  float:right;
+}
+
+
+img {
+  float:left;
+}
+.cistic {
+  clear: both;
+}
+.canvas {
+  background-color:darksalmon;
+  color: white;
+  font: 18px Verdana;
+  height: 200px;
+  width: 200px;
+  border-radius: 50px;
+  
+}
+.canvasd {
+  background-color:darksalmon;
+  color: white;
+  font: 18px Verdana;
+  height: 50px;
+  width: 100px;
+  border-radius: 50px;
+}
+.inpucanvas{
+  background-color:whitesmoke;
+  color: white;
+  font: 8px Verdana;
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+}
+.vedle {
+  float:left;
+}
