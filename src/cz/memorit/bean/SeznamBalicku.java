@@ -3,13 +3,13 @@ package cz.memorit.bean;
 import java.util.ArrayList;
 
 public class SeznamBalicku {
-	public ArrayList<String> baliceklist;
+	public ArrayList<Balicek> baliceklist;
 
-	public ArrayList<String> getBaliceklist() {
+	public ArrayList<Balicek> getBaliceklist() {
 		return baliceklist;
 	}
 
-	public void setBaliceklist(ArrayList<String> baliceklist) {
+	public void setBaliceklist(ArrayList<Balicek> baliceklist) {
 		this.baliceklist = baliceklist;
 	}
 
