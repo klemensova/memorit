@@ -23,8 +23,8 @@ public class MemoritServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-
-		response.getWriter().append("ok");
+		String redirect = "";
+		getServletConfig().getServletContext().getRequestDispatcher(redirect).forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
