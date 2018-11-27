@@ -11,9 +11,10 @@ import cz.memorit.bean.Balicek;
 import cz.memorit.controller.SeznamBalickuCtrl;
 import cz.memorit.controller.SeznamKarticekCtrl;
 import cz.memorit.controller.UlozitKartickuCtrl;
+import cz.memorit.controller.VybratBalicekCtrl;
 import cz.memorit.controller.VybratKartickuCtrl;
 import cz.memorit.controller.VybratPetKarticekCtrl;
-import cz.memorit.controller.vybratBalicekCtrl;
+
 import cz.memorit.dao.MemoritDao;
 
 @WebServlet("/MemoritServlet")
@@ -40,7 +41,7 @@ public class MemoritServlet extends HttpServlet {
 		    case "vybernebovytvor":
 		    	String vybratBalicek = request.getParameter("vybratBalicek");
 		    	String vytvorKarticku =request.getParameter("vytvorKarticku");
-		    	vybratBalicekCtrl vybrctrl = new vybratBalicekCtrl();
+		    	VybratBalicekCtrl vybrctrl = new VybratBalicekCtrl();
 		    	SeznamKarticekCtrl sezKartctrl = new SeznamKarticekCtrl();
 		    	if (vybratBalicek != null) {
 		    		redirect=vybrctrl.handle(request,response);
