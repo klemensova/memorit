@@ -16,7 +16,6 @@ public class UlozitKartickuCtrl implements ControllerInterface {
 		novaKarticka.setFront_karta(novyFrontKarta);
 		novaKarticka.setBack_karta(novyBackKarta);
 		Integer idBalicku = (Integer)request.getSession().getAttribute("id_balicek");
-		// kontrola na null
 		novaKarticka.setId_balicek(idBalicku);
 		instanceDao.saveKarticka(novaKarticka);
 		
