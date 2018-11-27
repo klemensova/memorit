@@ -14,12 +14,12 @@ public class VybratBalicekCtrl implements ControllerInterface {
 	
 	@Override
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
-			Integer idBalicku = (Integer)request.getParameter().getAttribute("id_balicek");
-			Balicek nactenyBalicek = instanceDao.loadBalicek(idBalicku);
-			nactenyBalicek
-			return "/SeznamBalicku.jsp";
-		
-		
+			Integer id_balicek = Integer.valueOf(request.getParameter("vybratBalicek"));
+			Balicek balicek = instanceDao.loadBalicek(id_balicek);
+			request.getSession().setAttribute("id_balicek", balicek.id_balicek);
+			request.getSession().setAttribute("nazev_balicek", balicek.nazev_balicek);
+			
+			return "/MemoritServlet?action=vypisSeznam";
 	}
 
 }
