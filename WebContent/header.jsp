@@ -23,7 +23,7 @@
           <li class="aktivni">
             <button  name="action" value="vyberKarticku">Kartičky</button></li>
           <li class="aktivni">
-            <button  name="action" value="vyberKarticku">Doplňování</button></li>
+            <button  name="action" value="doplnovani">Doplňování</button></li>
           <li class="aktivni">
             <button  name="action"value="vyberPetKarticek">Přiřazování</button></li>
 

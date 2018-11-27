@@ -19,8 +19,8 @@
         <div class= "canvas" id="canvas_back" width="100" height="200" style="border:2px solid #000000;">
           <p>neco</p>
         </div>
-          <form>
-            <button type="submit" name="action" value="insert" class="button">Další</button>
+          <form action="MemoritServlet">
+            <button type="submit" name="action" value="vyberKarticku" class="button">Další</button>
           </form>
           </div>
           </body>

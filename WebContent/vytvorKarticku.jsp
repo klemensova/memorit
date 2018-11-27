@@ -16,7 +16,7 @@
     <div class="celyblok">
       <p>Vytvoř kartičku</p>
       <p>Vlož do políček slova tak, jak patří dvojice k sobě</p>
-      <form action="action" method="post">
+      <form action="MemoritServlet" method="post">
       
         <p><input type="text" name="front_karta" value=""/>
         <label name="front_karta">Co neumím</label>
@@ -25,7 +25,7 @@
           <label name="back_karta">Co umím</label></p>
        
       <br/>
-        <button type="submit" name="action" value="insert" class="button">Uložit</button>
+        <button type="submit" name="action" value="insertKarticka" class="button">Uložit</button>
 
       </form>
     
@@ -35,7 +35,7 @@
     <br/>
     <br/>
     
-      <a href="karticky.jsp" class="button">Hotovo</a>
+    
     </div>
   </body>
 </html>

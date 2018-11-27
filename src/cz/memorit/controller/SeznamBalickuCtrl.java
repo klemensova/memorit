@@ -18,7 +18,7 @@ public class SeznamBalickuCtrl implements ControllerInterface {
 		
 		SeznamBalicku seznam = instanceDao.loadSeznamBalicku();
 		request.setAttribute("seznamBalicku", seznam);
-		return "seznamBalicku.jsp";
+		return "/MemoritServlet?action=vypisSeznam";
 	}
 
 }

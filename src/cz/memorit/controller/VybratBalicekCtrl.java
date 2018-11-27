@@ -14,7 +14,7 @@ public class VybratBalicekCtrl implements ControllerInterface {
 	
 	@Override
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
-			Integer idBalicku = (Integer)request.getSession().getAttribute("id_balicek");
+			Integer idBalicku = (Integer)request.getParameter().getAttribute("id_balicek");
 			Balicek nactenyBalicek = instanceDao.loadBalicek(idBalicku);
 			nactenyBalicek
 			return "/SeznamBalicku.jsp";

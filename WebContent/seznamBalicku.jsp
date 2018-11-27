@@ -33,10 +33,10 @@
 				<li>
 					První balíček
 					<button name="vybratBalicek" value="8">
-						Nazev Balicek
+						Vybrat balíček
 					</button>
 					<br>
-					<button class="radekseznamu" name="vytvorKarticku" value="id_balicek">
+					<button class="radekseznamu" name="vytvorKarticku" value="8">
 						Přidej kartičky
 					</button>
 				</li>

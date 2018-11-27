@@ -15,10 +15,12 @@ public class UlozitKartickuCtrl implements ControllerInterface {
 		Karticka novaKarticka = new Karticka();
 		novaKarticka.setFront_karta(novyFrontKarta);
 		novaKarticka.setBack_karta(novyBackKarta);
-		novaKarticka.setId_balicek((Integer)request.getSession().getAttribute("id_balicek"));
+		Integer idBalicku = (Integer)request.getSession().getAttribute("id_balicek");
+		// kontrola na null
+		novaKarticka.setId_balicek(idBalicku);
 		instanceDao.saveKarticka(novaKarticka);
 		
-		return "/vytvorKarticku.jsp";
+		return "/MemoritServlet?action=vybernebovytvor&vytvorKarticku="+idBalicku;
 	}
 
 }
