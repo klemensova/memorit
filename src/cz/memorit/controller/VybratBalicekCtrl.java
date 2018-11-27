@@ -9,7 +9,7 @@ import cz.memorit.bean.SeznamBalicku;
 import cz.memorit.bean.SeznamKarticek;
 import cz.memorit.dao.MemoritDao;
 
-public class vybratBalicekCtrl implements ControllerInterface {
+public class VybratBalicekCtrl implements ControllerInterface {
 	MemoritDao instanceDao = new MemoritDao();
 	
 	@Override
