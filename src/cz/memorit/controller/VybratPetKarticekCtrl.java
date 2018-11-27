@@ -7,7 +7,7 @@ import cz.memorit.bean.Karticka;
 import cz.memorit.bean.SeznamKarticek;
 import cz.memorit.dao.MemoritDao;
 
-public class VybratPetKarticekCtrl {
+public class VybratPetKarticekCtrl implements ControllerInterface {
 private MemoritDao instanceDao = new MemoritDao();
 	
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
