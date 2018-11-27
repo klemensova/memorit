@@ -48,14 +48,19 @@ public class MemoritServlet extends HttpServlet {
 		    	} else if (vytvorKarticku != null){
 		    		redirect=sezKartctrl.handle(request,response);
 		    	}
+		    break;
 		    case "vyberKarticku":
 		    	VybratKartickuCtrl seznamKart = new VybratKartickuCtrl ();
 		    	redirect = seznamKart.handle(request,response);
-		    	
+		    break;
 		    case "vyberPetKarticek":
 		    	VybratPetKarticekCtrl sezPetKart = new VybratPetKarticekCtrl();
 		    	redirect = sezPetKart.handle(request,response);	    	
-
+		    break;
+		    case "karticka":
+		    	UlozitKartickuCtrl karticka = new UlozitKartickuCtrl();
+		    	redirect = karticka.handle(request,response);	    	
+		    break;
 		}
 		/*
 		 * 1) vzit parametr action
