@@ -139,8 +139,6 @@ public class MemoritDao {
 		} 
 		ret.setKartaList(list);
 		return ret;
-	
-		
 	}
 	
 
