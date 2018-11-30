@@ -1,5 +1,7 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page import="cz.memorit.bean.Balicek"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,16 +32,21 @@
 		<form action="MemoritServlet">
 			<input type="hidden" name="action" value="vybernebovytvor"/>
 			<ul>
-				<li>
-					První balíček
-					<button name="vybratBalicek" value="8">
-						Vybrat balíček
-					</button>
-					<br>
-					<button class="radekseznamu" name="vytvorKarticku" value="8">
-						Přidej kartičky
-					</button>
-				</li>
+				<jsp:useBean id="seznamBalicku" scope="request" class="cz.memorit.bean.SeznamBalicku"/>
+				<%
+					for (Balicek balicek:seznamBalicku.getBaliceklist()) {
+					%>	<li> <%= balicek.getNazev_balicek() %>
+							<button name="action" value="vybernebovytvor">
+								Vybrat balíček
+							</button>
+							<br>
+							<button class="radekseznamu" name="action" value="vybernebovytvor">
+								Přidej kartičky
+							</button>	
+						</li>
+				<%	 
+					}
+				%>	
 			</ul>
 		</form>
 	</div>

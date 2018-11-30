@@ -14,11 +14,9 @@ public class SeznamBalickuCtrl implements ControllerInterface {
 
 	@Override
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
-	
-		
 		SeznamBalicku seznam = instanceDao.loadSeznamBalicku();
 		request.setAttribute("seznamBalicku", seznam);
-		return "/MemoritServlet?action=vypisSeznam";
+		return "/seznamBalicku.jsp";
 	}
 
 }
