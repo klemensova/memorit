@@ -10,17 +10,14 @@
   </head>
   <body>
     <%@ include file="header.jsp" %>
-     
+      <jsp:useBean id="randomKarticka" scope="request" class="cz.memorit.bean.Karticka"/>
       <p><span class="balicek"><%=session.getAttribute("nazev_balicek") %></span></p>
       <div class="celyblok">
         <div class= "canvas" id="canvas_front" width="100" height="200" style="border:2px solid #000000;">
-          <jsp:useBean id="randomKarticka" scope="request" class="cz.memorit.bean.Karticka"/>
-          <jsp:getProperty name="randomKarticka" property="front_karta"/>
-          
+          	<jsp:getProperty name="randomKarticka" property="front_karta"/>
         </div> 
         <div class= "canvas" id="canvas_back" width="100" height="200" style="border:2px solid #000000;">
-         
-           <jsp:getProperty name="randomKarticka" property="back_karta"/>
+          	 <jsp:getProperty name="randomKarticka" property="back_karta"/>
         </div>
           <form action="MemoritServlet">
             <button type="submit" name="action" value="vyberKarticku" class="button">Další</button>

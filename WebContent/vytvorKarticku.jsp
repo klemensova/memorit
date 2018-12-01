@@ -26,6 +26,7 @@
 				%>
 				<span><%=karticka.getFront_karta() %></span>
 				<span><%= karticka.getBack_karta()%></span>
+				<br/>
 				<%
 			}
 		%>
