@@ -21,32 +21,27 @@
 	<br />
 	<br />
 	<div class="celyblok">
-		<p>
-			<a href="vytvorBalicek.html">Vytvoř nový balíček</a>
-		<p>
-			<%-- 
-    1) obalit formem, action=memoritservlet 
-    2) <a> prepsat na button, name="vytvoritKarticku" value= id balicku
-    3) pridat button name="vybratBalicek" value = id balicku, mezi tagy dat nazev balicku
-    --%>
 		<form action="MemoritServlet">
-			<input type="hidden" name="action" value="vybernebovytvor"/>
+			<p>
+				<button name="ulozitBalicek" value="ulozitBalicek">Vytvoř nový balíček</button>
+			<p>
+
+
+				<input type="hidden" name="action" value="vybernebovytvor" />
 			<ul>
-				<jsp:useBean id="seznamBalicku" scope="request" class="cz.memorit.bean.SeznamBalicku"/>
+				<jsp:useBean id="seznamBalicku" scope="request"
+					class="cz.memorit.bean.SeznamBalicku" />
 				<%
-					for (Balicek balicek:seznamBalicku.getBaliceklist()) {
-					%>	<li> <%= balicek.getNazev_balicek() %>
-							<button name="vybratBalicek" value="<%= balicek.getId_balicek() %>">
-								Vybrat balíček
-							</button>
-							<br>
-							<button class="radekseznamu" name="vytvorKarticku" value="<%= balicek.getId_balicek() %>">
-								Přidej kartičky
-							</button>	
-						</li>
-				<%	 
+					for (Balicek balicek : seznamBalicku.getBaliceklist()) {
+				%>
+				<li><%=balicek.getNazev_balicek()%>
+					<button name="vybratBalicek" value="<%=balicek.getId_balicek()%>">
+						Vybrat balíček</button> <br>
+					<button class="radekseznamu" name="vytvorKarticku"
+						value="<%=balicek.getId_balicek()%>">Přidej kartičky</button></li>
+				<%
 					}
-				%>	
+				%>
 			</ul>
 		</form>
 	</div>
