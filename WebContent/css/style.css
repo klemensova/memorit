@@ -3,6 +3,147 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
 body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 25px;
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+header {
+  background-color: #086788;
+  width: 1024px;
+  margin: auto; 
+  height: 175px;
+}
+
+.logo {
+  width: 75%;
+  display: block; 
+  margin: auto; 
+  height: 175px;
+}
+
+#ul {
+  padding: 0;
+  list-style-type: none;
+  background-color: #086788;
+  width: 1024px;
+  margin: 0 auto;  
+ 
+}
+
+#ul li {
+  float: left;
+  display: inline-block;
+  width: 204px;
+  background-color: #086788;
+  text-align: center;
+  padding: 10px 0;
+  border-right: 1px solid white;
+}
+#ul li:last-child {
+  border-right: none;
+}
+
+#ul button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:transparent;
+  border:0px;
+}
+
+#ul li:hover {
+  background-color: #07a0c3;
+}
+.active {
+  background-color: #ff5252;
+}
+.main {
+  width: 1024px;
+  background-color: #eeeeee;
+  text-align: center;
+  
+  margin:auto;
+  
+}
+table {
+  width: 100%;
+  text-align:left;
+  border-collapse:collapse;
+  margin-top: 75px; 
+  
+}
+td, th {
+  padding:7px;
+}
+th {
+  background-color: #aeb4b8/*#07a0c3*/;
+  font-weight:bold;
+  text-align:center;
+  color: #444;
+  padding: 15px;
+}
+tr:nth-child(odd) {background-color: #aeb4b8;}
+
+input[type=submit] {
+  border: none;
+  background-color: #eeeeee;
+  border-radius:5px;
+  padding:8px;
+  color:white;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.nazev {
+  padding-right: 200px;
+  padding-left: 40px;
+}
+
+.balicek {
+  border: none;
+  background-color: #3490DC;
+  border-radius:5px;
+  padding:8px;
+  color:white;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 300px;
+ 
+}
+.karticky {
+  border: none;
+  background-color: #ff5252;
+  border-radius:5px;
+  padding:8px;
+  color:white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.front {
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  padding: 100px 0px;
+  margin-top: 20px;
+  margin-left: 80px;
+  background-color: #f1f1f1;
+  font-size: 50px;
+  
+}
+
+.back {
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*body {
   background-color:white;
   font-family: "Open Sans", sans-serif;
   padding: 5px 25px;
@@ -33,10 +174,25 @@ nav ul li {
   margin: 0px 5px;
   font: 17px Verdana;
   height: 50px;
+  width:80px;
   line-height: 3em;
   background-color: #034f84 ;
 
 
+}
+
+.button2{
+  float: left;
+  padding: 0px 25px;
+  margin: 0px 5px;
+  font: 17px Verdana;
+  height: 50px;
+  line-height: 3em;
+  background-color: #034f84 ;
+  color:white;
+  border:none;
+  width:80px;
+  text-align:left;
 }
 nav a {
   color: white;
@@ -72,8 +228,6 @@ p {
   font-size: 18px;
   color: white;
   float:right;
- 
-  
 }
 .balicek {
  
@@ -143,4 +297,4 @@ img {
 
 .vedle {
   float:left;
-}
+}*/

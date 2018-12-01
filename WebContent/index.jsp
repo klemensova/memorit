@@ -11,7 +11,7 @@
   <body>
      <%@ include file="header.jsp" %> 
    
-    <h1>
+    <!-- <h1>
     Vítejte v aplikaci Memorit
     </h1>
     <div class="celyblok">
@@ -23,6 +23,6 @@
       <img src="fotky/181013135347-0U5A2560.jpg"/>--%>
         <span class="cistic"></span>
       </div>
-    
+    -->
   </body>
 </html>
