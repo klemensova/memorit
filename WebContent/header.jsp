@@ -40,17 +40,13 @@
         <li> <button class="button2" name="action"  value="vyberKarticku">Kartičky</button></li>
         <li> <button class="button2" name="action" value="doplnovani">Doplňování</button></li>
         <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li>
+        <li><%=session.getAttribute("nazev_balicku") %></li>
       </ul>
     </nav>
-    <div class="main">
-      <h1>
-        Vítejte v aplikaci Memorit
-      </h1>
-        <p>Tato aplikace je určená všem, kteří se chtějí něco naučit. Dává také možnost procvičování. Zkuste ji využít třeba k učení slovíček.</p>
-    </div>
+   
 
       
-      <!-- <p>${session.getAttribute("nazev_balicek")}</p> -->
+    
     </header>
     
     
