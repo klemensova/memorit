@@ -11,7 +11,7 @@
   <body>
     <%@ include file="header.jsp" %>
            
-      <p><span class="balicek">Název Balíčku</span></p>
+      <p><span class="balicek"><%=session.getAttribute("nazev_balicek") %></span></p>
       <div class="celyblok">
       <input class="inpucanvas"type="text" name="jmeno" size="2"> 
         <div class= "canvasd" id="canvas_front" width="100" height="200" style="border:2px solid #000000;">
