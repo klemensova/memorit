@@ -38,9 +38,9 @@
         <li class="active"> <button class="button2"  name="action" value="uvod">Úvodní stránka</button> </li>
         <li> <button class="button2"name="action" value="vypisSeznam">Seznam balíčků</button></li>
         <li> <button class="button2" name="action"  value="vyberKarticku">Kartičky</button></li>
-        <li> <button class="button2" name="action" value="doplnovani">Doplňování</button></li>
-        <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li>
-        <li><%=session.getAttribute("nazev_balicku") %></li>
+        <!-- <li> <button class="button2" name="action" value="doplnovani">Doplňování</button></li>
+        <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li> -->
+        <li> <span class="light"><%=session.getAttribute("nazev_balicku") %></span></li>
       </ul>
     </nav>
    
