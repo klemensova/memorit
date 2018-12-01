@@ -61,7 +61,13 @@ public class MemoritServlet extends HttpServlet {
 		    	UlozitKartickuCtrl karticka = new UlozitKartickuCtrl();
 		    	redirect = karticka.handle(request,response);	    	
 		    break;
+		    case "uvod":
+		    
+		    	redirect = "/index.jsp";	
+		    break;
+		    
 		}
+		
 		/*
 		 * 1) vzit parametr action
 		 * 2) pokud action == vybernebovytvor vezmeme parametry vybratBalicek a vytvorKarticku
