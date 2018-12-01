@@ -21,7 +21,7 @@
 	<br />
 	<br />
 	<div class="celyblok">
-		<form action="MemoritServlet">
+		<form action="MemoritServlet" method="get">
 			<p>
 				<a href="vytvorBalicek.jsp">Vytvoř nový balíček</a>
 			<p>

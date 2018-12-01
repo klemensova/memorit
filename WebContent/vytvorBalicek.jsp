@@ -19,10 +19,10 @@
       <br/>
       <div class="celyblok">
         <p>Zadej název nového balíčku:</p>
-        <form action="action" method="post">
+        <form action="MemoritServlet" method="get">
           <p>
             <input type="text" name="nazev_balicek" value="" />
-            <button type="submit" name="action" value="insert" class="button">Uložit</button>
+            <button type="submit" name="action" value="ulozitBalicek" class="button">Uložit</button>
           </p>
         </form>
 
