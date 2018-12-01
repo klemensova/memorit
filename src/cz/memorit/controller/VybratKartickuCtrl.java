@@ -13,7 +13,7 @@ public class VybratKartickuCtrl implements ControllerInterface{
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
 		Integer idBalicku = (Integer)request.getSession().getAttribute("id_balicek");
 		SeznamKarticek seznam = instanceDao.loadKarticka(idBalicku, 1);
-		if(seznam != null) {
+		if(seznam != null && seznam.getKartaList().size() > 0) {
 			Karticka nactenaKarticka = seznam.getKartaList().get(0);
 			request.setAttribute("randomKarticka", nactenaKarticka);
 		} 

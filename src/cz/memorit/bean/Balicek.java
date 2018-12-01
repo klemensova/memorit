@@ -1,8 +1,8 @@
 package cz.memorit.bean;
 
 public class Balicek {
-	   public Integer id_balicek;
-	   public String nazev_balicek;
+	   private  Integer id_balicek;
+	   private  String nazev_balicek;
 
 	public String getNazev_balicek() {
 		return nazev_balicek;

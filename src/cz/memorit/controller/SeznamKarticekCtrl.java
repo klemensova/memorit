@@ -13,9 +13,9 @@ public class SeznamKarticekCtrl implements ControllerInterface {
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
 		Integer id_balicek = Integer.valueOf(request.getParameter("vytvorKarticku"));
 		Balicek balicek = instanceDao.loadBalicek(id_balicek);
-		request.getSession().setAttribute("id_balicek", balicek.id_balicek);
-		request.getSession().setAttribute("nazev_balicek", balicek.nazev_balicek);
-		SeznamKarticek seznam = instanceDao.loadSeznamKarticek(balicek.id_balicek);
+		request.getSession().setAttribute("id_balicek", balicek.getId_balicek());
+		request.getSession().setAttribute("nazev_balicek", balicek.getNazev_balicek());
+		SeznamKarticek seznam = instanceDao.loadSeznamKarticek(balicek.getId_balicek());
 		request.setAttribute("seznamKarticek", seznam);
 		return "/vytvorKarticku.jsp";
 	}

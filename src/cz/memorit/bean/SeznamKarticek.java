@@ -3,7 +3,7 @@ package cz.memorit.bean;
 import java.util.ArrayList;
 
 public class SeznamKarticek {
-	public ArrayList <Karticka> kartaList;
+	private  ArrayList <Karticka> kartaList;
 
 	public ArrayList<Karticka> getKartaList() {
 		return kartaList;
