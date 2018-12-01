@@ -22,7 +22,7 @@ header {
   width: 75%;
   display: block; 
   margin: auto; 
-  height: 175px;
+  height: 178px;
 }
 
 #ul {
@@ -50,9 +50,10 @@ header {
 #ul button {
   color: white;
   text-decoration: none;
-  font-weight: bold;
   background-color:transparent;
   border:0px;
+  font-family: "Open Sans", sans-serif;
+    font-size: 18px;
 }
 
 #ul li:hover {
@@ -70,14 +71,13 @@ header {
   
 }
 table {
-  width: 100%;
+  width: 400px;
   text-align:left;
-  border-collapse:collapse;
-  margin-top: 75px; 
-  
+  border-collapse:collapse;  
 }
-td, th {
-  padding:7px;
+td {
+  margin:7px;
+  width:180px;
 }
 th {
   background-color: #aeb4b8/*#07a0c3*/;
@@ -151,10 +151,19 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: #dcdddd;
+  padding:30px;
 }
 
 .radekseznamu {
   float:right;
+  color: white;
+  font-weight: bold;
+  background-color:#086788;
+  border-style: solid black;
+  border:4px;  
+}
+.radekseznamu1 {
+  float:left;
   color: white;
   font-weight: bold;
   background-color:#086788;
@@ -176,8 +185,11 @@ a {
   text-decoration: none;
   border-style: solid;
 }
-.light {
-  color: white;
+
+#ul .nazevBalicku {
+	background-color:#07a0c3;
+	color: white;
+
 }
 .sloupec {
   background-color:#086788;

@@ -24,9 +24,13 @@
 		<%
 			for (Karticka karticka : seznamKarticek.getKartaList()) {
 				%>
-				<span><%=karticka.getFront_karta() %></span>
-				<span><%= karticka.getBack_karta()%></span>
-				<br/>
+				<table>
+				<tr>
+				<td><%=karticka.getFront_karta() %></td>
+				<td><%= karticka.getBack_karta()%></td>
+				</tr>
+				<br>
+				</table>
 				<%
 			}
 		%>
@@ -38,7 +42,7 @@
 				<input type="text" name="back_karta" value="" /> 
 			</p>
 			<br />
-			<button type="submit" name="action" value="karticka" class="button">Uložit</button>
+			<button type="submit" name="action" value="karticka" class="radekseznamu1">Uložit</button>
 		</form>
 
 		<br /> <br /> <br /> <br /> <br />
