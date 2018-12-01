@@ -11,7 +11,7 @@
   <body>
     <%@ include file="header.jsp" %>
      
-      <p><span class="balicek">Název Balíčku</span></p>
+      <p><span class="balicek"><%=session.getAttribute("nazev_balicek") %></span></p>
       <div class="celyblok">
         <div class= "canvas" id="canvas_front" width="100" height="200" style="border:2px solid #000000;">
           <jsp:useBean id="randomKarticka" scope="request" class="cz.memorit.bean.Karticka"/>

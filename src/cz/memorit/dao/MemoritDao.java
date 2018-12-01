@@ -20,7 +20,7 @@ import cz.memorit.bean.SeznamKarticek;
 public class MemoritDao {
 	private static final String INSERTBALICEK = "INSERT INTO Balicek(nazev_balicek) VALUES (?)";
 	private static final String LOADSEZNAMBALICKU = "SELECT * FROM Balicek";
-	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta) VALUES (?,?)";
+	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta,id_balicek) VALUES (?,?,?)";
 	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta WHERE id_balicek = ?";
 	private static final String LOADBALICEK = "SELECT * FROM Balicek WHERE id_balicek = ?";
 	private static final String LOADKARTICKA = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY RAND() LIMIT ?";
@@ -69,6 +69,7 @@ public class MemoritDao {
 		{		
 			stmt.setString(1, novaKarticka.getFront_karta());
 			stmt.setString(2, novaKarticka.getBack_karta());
+			stmt.setInt(3, novaKarticka.getId_balicek());
 			stmt.executeUpdate();
 			//con.commit();
 		} catch (SQLException e) {

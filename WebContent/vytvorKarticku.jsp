@@ -14,7 +14,7 @@
 	<br />
 	<br />
 	<p>
-		<span class="balicek">Název Balíčku</span>
+		<span class="balicek"><%=session.getAttribute("nazev_balicek") %></span>
 	</p>
 	<div class="celyblok">
 		<p>Vytvoř kartičku</p>
@@ -37,7 +37,7 @@
 				<input type="text" name="back_karta" value="" /> 
 			</p>
 			<br />
-			<button type="submit" name="action" value="insertKarticka" class="button">Uložit</button>
+			<button type="submit" name="action" value="karticka" class="button">Uložit</button>
 		</form>
 
 		<br /> <br /> <br /> <br /> <br />
