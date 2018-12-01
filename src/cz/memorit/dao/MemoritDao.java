@@ -146,7 +146,7 @@ public class MemoritDao {
 	private DataSource getDataSource( ) {
 		try {
 			Context ctx = new InitialContext();
-			return (DataSource)ctx.lookup("java:/comp/env/jdbc/procvicovacipomuckaResource");
+			return (DataSource)ctx.lookup("java:/comp/env/procvicovacipomuckaResource");
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}
