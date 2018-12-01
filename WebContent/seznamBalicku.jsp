@@ -23,7 +23,7 @@
 	<div class="celyblok">
 		<form action="MemoritServlet">
 			<p>
-				<button name="ulozitBalicek" value="ulozitBalicek">Vytvoř nový balíček</button>
+				<a href="vytvorBalicek.jsp">Vytvoř nový balíček</a>
 			<p>
 
 
