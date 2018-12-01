@@ -17,7 +17,7 @@
     <div class="celyblok">
       <p>Tato aplikace je určená všem, kteří se chtějí něco naučit. Dává také možnost procvičování. Zkuste ji využít třeba k učení slovíček</p>
    
-        <p>Autorky projektu:</p>-->
+        <p>Autorky projektu:</p>
       <img src="fotky/181013134609-0U5A2497.jpg"/>
       <img src="fotky/181013134945-0U5A2544.jpg"/>
       <img src="fotky/181013135347-0U5A2560.jpg"/>
