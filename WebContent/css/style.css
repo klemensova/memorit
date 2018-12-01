@@ -102,7 +102,9 @@ input[type=submit] {
   padding-right: 200px;
   padding-left: 40px;
 }
-
+.center {
+	text-align: center;
+}
 .balicek {
   border: none;
   background-color: #3490DC;
@@ -150,6 +152,7 @@ img {
   margin-right: auto;
   background-color: #dcdddd;
 }
+
 .radekseznamu {
   float:right;
   color: white;
