@@ -179,7 +179,7 @@ a {
 .sloupec {
   background-color:#086788;
   color:white;
-  align-content: center;
+  align-content: left;
   font-family: sans-serif;
   font-size: 24px;
   height: 150px;
@@ -189,6 +189,11 @@ a {
   border-style: solid sandybrown;
 }
 
+.centrum{
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
 #canvas_back {
   display:none;
 }

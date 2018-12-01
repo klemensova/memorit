@@ -13,20 +13,19 @@
       <jsp:useBean id="randomKarticka" scope="request" class="cz.memorit.bean.Karticka"/>
       <% if (session.getAttribute("nazev_balicek") != null) { %>
       <p><span class="balicek"><%=session.getAttribute("nazev_balicek") %></span></p>
-       
-       <div class= "sloupec"id="canvas_front"style="width:50%; float: center; background: darkmagenta;margin-left:300px;">
-          <p>text</p>
-          <jsp:getProperty name="randomKarticka" property="front_karta"/>
+   
+       <div class= "sloupec"id="canvas_front"style="width:30%; /*float: left */; background: darkmagenta;margin-left:300px;"></span>
+          <span class="centrum"><jsp:getProperty name="randomKarticka" property="front_karta"/>
         </div>
       <div class="cistic">
         </div>
       <br>
-      <div class= "sloupec"id="canvas_back"style="width:50%; float: center; background: darkmagenta;margin-left:300px;">
-          <p>text</p>
+      <div class= "sloupec"id="canvas_back"style="width:50%; float:left; background: darkmagenta;margin-left:300px;">
           <jsp:getProperty name="randomKarticka" property="back_karta"/>
         </div>
       <div class="cistic">
       </div>
+      
       <br>
           <form>
             <button type="submit" name="action" value="vyberKarticku" class="button">Další</button>
