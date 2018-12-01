@@ -40,7 +40,16 @@
         <li> <button class="button2" name="action"  value="vyberKarticku">Kartičky</button></li>
         <!-- <li> <button class="button2" name="action" value="doplnovani">Doplňování</button></li>
         <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li> -->
-        <li> <span class="light"><%=session.getAttribute("nazev_balicku") %></span></li>
+        <li> 
+	        <span class="light">
+	        <% 
+	        	String nazevBalicku = (String)session.getAttribute("nazev_balicku");
+	        	if (nazevBalicku != null) {
+	        		out.print(nazevBalicku);
+	        	}
+	       	%>
+	       	</span>
+       	</li>
       </ul>
     </nav>
    

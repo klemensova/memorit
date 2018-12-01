@@ -11,6 +11,7 @@
   <body>
     <%@ include file="header.jsp" %>
       <jsp:useBean id="randomKarticka" scope="request" class="cz.memorit.bean.Karticka"/>
+      <% if (session.getAttribute("nazev_balicek") != null) { %>
       <p><span class="balicek"><%=session.getAttribute("nazev_balicek") %></span></p>
       <div class="celyblok">
         <div class= "canvas" id="canvas_front" width="100" height="200" style="border:2px solid #000000;">
@@ -23,5 +24,6 @@
             <button type="submit" name="action" value="vyberKarticku" class="button">Další</button>
           </form>
           </div>
+          <% } %>
           </body>
         </html>
