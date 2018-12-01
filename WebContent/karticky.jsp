@@ -37,7 +37,7 @@
 			<jsp:getProperty name="randomKarticka" property="front_karta" />
 		</div>
 		<div id="canvas_back"
-			style="background: #dcdddd; color: white; text-align: center; margin: auto; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">
+			style="background: #dcdddd; color: #444; text-align: center; margin: auto; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">
 			<jsp:getProperty name="randomKarticka" property="back_karta" />
 		</div>
 	</div>
