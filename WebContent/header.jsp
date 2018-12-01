@@ -43,10 +43,10 @@
         <li> 
 	        <span class="light">
 	        <% 
-	        	String nazevBalicku = (String)session.getAttribute("nazev_balicku");
+	        	String nazevBalicku = (String)session.getAttribute("nazev_balicek");
 	        	if (nazevBalicku != null) {
 	        		out.print(nazevBalicku);
-	        	}
+	        	} 
 	       	%>
 	       	</span>
        	</li>
