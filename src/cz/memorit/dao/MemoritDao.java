@@ -26,6 +26,7 @@ public class MemoritDao {
 	private static final String LOADKARTICKA = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY RAND() LIMIT ?";
 	
 	
+	
 	public void saveBalicek (Balicek novyBalicek) {
 		DataSource ds = getDataSource();
 		
@@ -143,6 +144,7 @@ public class MemoritDao {
 	}
 	
 
+	
 	
 	private DataSource getDataSource( ) {
 		try {

@@ -10,24 +10,35 @@
   </head>
   <body>
     <%@ include file="header.jsp" %>
+    <jsp:useBean id="doplnKarticku" scope="request" class="cz.memorit.bean.Karticka"/>
+    <%
+		if (session.getAttribute("nazev_balicek") != null) {
+	%>
       
       <p><span class="balicek"><%=session.getAttribute("nazev_balicek") %></span></p>
-      <div class="celyblok" class="vedle">
-     
-      <div class= "canvas" id="canvas_front" width="100" height="200" style="border:2px solid #000000;">
-        <p>neco</p>
-      </div> 
-        <div class= "canvas" id="canvas_back" width="100" height="200" style="border:2px solid #000000;">
-          <p>neco</p>
-        </div> 
+    <div class="center" style="text-align: center;">
+		<div id="canvas_front"
+			style="background: #dcdddd; color:#444 ; text-align: center; margin: auto; display: inline-block; padding: 40px; border-radius: 25%;" >
+			<jsp:getProperty name="doplnKarticku" property="front_karta" />
+		</div>
+		 <form action="MemoritServlet" method="get">
+		<div id="canvas_back"
+			style="background: #dcdddd; color: #444; text-align: center; margin: auto; padding: 40px; border-radius: 25%;" >
+			<input type="text" name="dopln" />
+		</div>
+	
+		<input type="hidden" name="back_karta" value="<jsp:getProperty name="doplnKarticku" property="back_karta" />"/>
        
-      <form>
-          <button type="submit" name="action" value="insert" class="button">Kontrola</button>
+      
+          <button type="submit" name="action" value="kontrola" class="button">Kontrola</button>
           <br>
           <br>
-          <button type="submit" name="action" value="insert" class="button">Další</button>
+          <button type="submit" name="action" value="doplnKarticku" class="button">Další</button>
         </form>
         <span class="cistic"></span>
         </div>
+        <%
+		}
+        %>
         </body>
       </html>

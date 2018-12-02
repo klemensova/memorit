@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import cz.memorit.bean.Balicek;
+import cz.memorit.controller.DoplnKartickuCtrl;
 import cz.memorit.controller.SeznamBalickuCtrl;
 import cz.memorit.controller.SeznamKarticekCtrl;
 import cz.memorit.controller.UlozitBalicekCtrl;
@@ -63,13 +64,16 @@ public class MemoritServlet extends HttpServlet {
 		    	redirect = karticka.handle(request,response);	    	
 		    break;
 		    case "uvod":
-		    
-		    	redirect = "/index.jsp";	
+		       redirect = "/index.jsp";	
 		    break;
 		    case "ulozitBalicek":
                 UlozitBalicekCtrl ulozBalicek = new UlozitBalicekCtrl();
                 redirect = ulozBalicek.handle(request,response);
             break;
+		    case "doplnovani":
+		    	DoplnKartickuCtrl doplnKarticku = new DoplnKartickuCtrl();
+		    	redirect = doplnKarticku.handle(request,response);
+		    	break;
 		    
 		}
 		
