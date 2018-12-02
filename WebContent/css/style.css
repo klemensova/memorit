@@ -102,6 +102,15 @@ input[type=submit] {
   padding-right: 200px;
   padding-left: 40px;
 }
+.expand {
+    position: center;
+    width: auto;
+    max-width: 1280px;
+    display: inline; 
+    z-index: 99;
+}
+
+
 .center {
 	text-align: center;
 }
@@ -153,7 +162,7 @@ img {
   background-color: #dcdddd;
   padding:30px;
 }
-
+ 
 .radekseznamu {
   float:right;
   color: white;
@@ -197,11 +206,12 @@ a {
   align-content: left;
   font-family: sans-serif;
   font-size: 24px;
-  height: 150px;
-  width: 80px;
+  height: 180px;
+  width: 230px;
   margin: 0 5px;
   border-radius: 50px;
   border-style: solid sandybrown;
+  
 }
 
 .centrum{
@@ -210,6 +220,10 @@ a {
 	margin-right:auto;
 }
 #canvas_back {
+  display:none;
+}
+
+.kontrola{
   display:none;
 }
 
