@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import cz.memorit.bean.Balicek;
 import cz.memorit.controller.DoplnKartickuCtrl;
+import cz.memorit.controller.KontrolaCtrl;
 import cz.memorit.controller.SeznamBalickuCtrl;
 import cz.memorit.controller.SeznamKarticekCtrl;
+import cz.memorit.controller.SmazatBalicekCtrl;
 import cz.memorit.controller.UlozitBalicekCtrl;
 import cz.memorit.controller.UlozitKartickuCtrl;
 import cz.memorit.controller.VybratBalicekCtrl;
@@ -43,12 +45,16 @@ public class MemoritServlet extends HttpServlet {
 		    case "vybernebovytvor":
 		    	String vybratBalicek = request.getParameter("vybratBalicek");
 		    	String vytvorKarticku =request.getParameter("vytvorKarticku");
+		    	String smazatBalicek = request.getParameter("smazatBalicek");
 		    	VybratBalicekCtrl vybrctrl = new VybratBalicekCtrl();
 		    	SeznamKarticekCtrl sezKartctrl = new SeznamKarticekCtrl();
+		    	SmazatBalicekCtrl smazctrl = new SmazatBalicekCtrl();
 		    	if (vybratBalicek != null) {
 		    		redirect=vybrctrl.handle(request,response);
 		    	} else if (vytvorKarticku != null){
 		    		redirect=sezKartctrl.handle(request,response);
+		    	} else if (smazatBalicek != null) {
+		    		redirect=smazctrl.handle(request,response);
 		    	}
 		    break;
 		    case "vyberKarticku":
@@ -70,11 +76,14 @@ public class MemoritServlet extends HttpServlet {
                 UlozitBalicekCtrl ulozBalicek = new UlozitBalicekCtrl();
                 redirect = ulozBalicek.handle(request,response);
             break;
-		    case "doplnovani":
+		    case "doplnKarticku":
 		    	DoplnKartickuCtrl doplnKarticku = new DoplnKartickuCtrl();
 		    	redirect = doplnKarticku.handle(request,response);
 		    	break;
-		    
+		    case"kontrola":
+		    	KontrolaCtrl kontrolaKarticky = new KontrolaCtrl();
+		    	redirect = kontrolaKarticky.handle(request, response);
+		    	break;
 		}
 		
 		/*

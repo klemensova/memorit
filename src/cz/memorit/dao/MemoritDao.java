@@ -24,7 +24,7 @@ public class MemoritDao {
 	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta WHERE id_balicek = ?";
 	private static final String LOADBALICEK = "SELECT * FROM Balicek WHERE id_balicek = ?";
 	private static final String LOADKARTICKA = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY RAND() LIMIT ?";
-	
+	private static final String DELBALICEK = "DELETE FROM Balicek WHERE id_balicek = ?";
 	
 	
 	public void saveBalicek (Balicek novyBalicek) {
@@ -60,6 +60,22 @@ public class MemoritDao {
 		} 
 		ret.setBaliceklist(list);
 		return ret;
+	}
+	
+	public Balicek delBalicek(Integer id_balicek) {
+	
+		DataSource ds = getDataSource();
+		try (Connection con = ds.getConnection(); PreparedStatement stmt = con.prepareStatement(DELBALICEK)) {
+			
+			stmt.setInt(1, id_balicek);
+			stmt.execute();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+	
+		return null;
 	}
 	
 	public void saveKarticka (Karticka novaKarticka) {

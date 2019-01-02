@@ -28,25 +28,31 @@
 	<%
 		if (session.getAttribute("nazev_balicek") != null) {
 	%>
+	<div class="stranka">
 	<p>
 		<span class="balicek"><%=session.getAttribute("nazev_balicek")%></span>
 	</p>
+	<br/>
+	
 	<div class="center" style="text-align: center;">
 		<div id="canvas_front"
-			style="background: #dcdddd; color:#444 ; text-align: center; margin: auto; display: inline-block; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">
+			style="background: #dcdddd; color:#444 ; width: 200px;  text-align: center; margin: auto; display: inline-block; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">
+			<br/>
 			<jsp:getProperty name="randomKarticka" property="front_karta" />
 		</div>
 		<div id="canvas_back"
-			style="background: #dcdddd; color: #444; text-align: center; margin: auto; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">
+			style="background: #dcdddd; color: #444; width: 200px; text-align: center; margin: auto; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">
+			<br/>
 			<jsp:getProperty name="randomKarticka" property="back_karta" />
 		</div>
 	</div>
 
 	
 	<div class="cistic"></div>
+	<br/>
 	<form>
 		<button type="submit" name="action" value="vyberKarticku"
-			class="radekseznamu" style="float: right;">Další</button>
+			class="button2" >Další</button>
 	</form>
 
 	<!-- <div class="celyblok">
@@ -63,5 +69,6 @@
 	<%
 		}
 	%>
+	</div>
 </body>
 </html>

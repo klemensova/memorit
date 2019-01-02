@@ -41,8 +41,8 @@
 				<label for="back_karta">Co umím</label>
 				<input type="text" name="back_karta" value="" /> 
 			</p>
-			<br />
-			<button type="submit" name="action" value="karticka" class="radekseznamu1">Uložit</button>
+			
+			<button type="submit" name="action" value="karticka" class="button3">Uložit</button>
 		</form>
 
 		<br /> <br /> <br /> <br /> <br />

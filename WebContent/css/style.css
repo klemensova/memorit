@@ -1,230 +1,255 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
 body {
-  background-color: white;
-  font-family: "Open Sans", sans-serif;
-  padding: 5px 25px;
-  font-size: 18px;
-  margin: 0;
-  color: #444;
+	background-color: white;
+	font-family: "Open Sans", sans-serif;
+	padding: 5px 25px;
+	font-size: 18px;
+	margin: 0;
+	color: #444;
 }
 
 header {
-  background-color: #086788;
-  width: 1024px;
-  margin: auto; 
-  height: 175px;
+	background-color: #086788;
+	width: 1024px;
+	margin: auto;
+	height: 175px;
 }
 
 .logo {
-  width: 75%;
-  display: block; 
-  margin: auto; 
-  height: 178px;
+	width: 75%;
+	display: block;
+	margin: auto;
+	height: 220px;
+}
+
+.stranka {
+	width: 75%;
+	margin: auto;
 }
 
 #ul {
-  padding: 0;
-  list-style-type: none;
-  background-color: #086788;
-  width: 1024px;
-  margin: 0 auto;  
- 
+	padding: 0;
+	list-style-type: none;
+	background-color: #086788;
+	width: 1024px;
+	margin: 0 auto;
 }
 
 #ul li {
-  float: left;
-  display: inline-block;
-  width: 25%;
-  background-color: #086788;
-  text-align: center;
-  padding: 10px 0;
- 
+	float: left;
+	display: inline-block;
+	width: 25%;
+	background-color: #086788;
+	text-align: center;
+	padding: 10px 0;
 }
+
 #ul li:last-child {
-  border-right: none;
+	border-right: none;
 }
 
 #ul button {
-  color: white;
-  text-decoration: none;
-  background-color:transparent;
-  border:0px;
-  font-family: "Open Sans", sans-serif;
-    font-size: 18px;
+	color: white;
+	text-decoration: none;
+	background-color: transparent;
+	border: 0px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 18px;
 }
 
 #ul li:hover {
-  background-color: #07a0c3;
+	background-color: #07a0c3;
 }
+
 .active {
-  background-color: #ff5252;
+	background-color: #ff5252;
 }
+
 .main {
-  width: 1024px;
-  background-color: #eeeeee;
-  text-align: center;
-  
-  margin:auto;
-  
+	width: 1024px;
+	background-color: #eeeeee;
+	text-align: center;
+	margin: auto;
 }
+
 table {
-  width: 400px;
-  text-align:left;
-  border-collapse:collapse;  
+	width: 400px;
+	text-align: left;
+	border-collapse: collapse;
 }
+
 td {
-  margin:7px;
-  width:180px;
+	margin: 7px;
+	width: 180px;
 }
+
 th {
-  background-color: #aeb4b8/*#07a0c3*/;
-  font-weight:bold;
-  text-align:center;
-  color: #444;
-  padding: 15px;
+	background-color: #aeb4b8 /*#07a0c3*/;
+	font-weight: bold;
+	text-align: center;
+	color: #444;
+	padding: 15px;
 }
-tr:nth-child(odd) {background-color: #aeb4b8;}
+
+tr:nth-child(odd) {
+	background-color: #aeb4b8;
+}
 
 input[type=submit] {
-  border: none;
-  background-color: #eeeeee;
-  border-radius:5px;
-  padding:8px;
-  color:white;
-  font-weight: bold;
-  margin-right: 10px;
+	border: none;
+	background-color: #eeeeee;
+	border-radius: 5px;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	margin-right: 10px;
 }
 
 .nazev {
-  padding-right: 200px;
-  padding-left: 40px;
-}
-.expand {
-    position: center;
-    width: auto;
-    max-width: 1280px;
-    display: inline; 
-    z-index: 99;
+	padding-right: 200px;
+	padding-left: 40px;
 }
 
+.expand {
+	position: center;
+	width: auto;
+	max-width: 1280px;
+	display: inline;
+	z-index: 99;
+}
 
 .center {
 	text-align: center;
 }
+
 .balicek {
-  border: none;
-  background-color: #3490DC;
-  border-radius:5px;
-  padding:8px;
-  color:white;
-  font-weight: bold;
-  font-size: 15px;
-  margin-left: 300px;
- 
+	border: none;
+	background-color: #3490DC;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: 450px;
+	height: 1m;
 }
+
 .karticky {
-  border: none;
-  background-color: #ff5252;
-  border-radius:5px;
-  padding:8px;
-  color:white;
-  font-weight: bold;
-  font-size: 15px;
+	border: none;
+	background-color: #ff5252;
+	border-radius: 5px;
+	padding: 8px;
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 .front {
-  float: left;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 400px;
-  padding: 100px 0px;
-  margin-top: 20px;
-  margin-left: 80px;
-  background-color: #f1f1f1;
-  font-size: 50px;
-  
+	float: left;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	width: 400px;
+	padding: 100px 0px;
+	margin-top: 20px;
+	margin-left: 80px;
+	background-color: #f1f1f1;
+	font-size: 50px;
 }
 
 .back {
-  display: inline-block;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	display: inline-block;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
 img {
-  float:left;
+	float: left;
 }
 
 .celyblok {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #dcdddd;
-  padding:30px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #dcdddd;
+	padding: 30px;
 }
- 
+
 .radekseznamu {
-  float:right;
-  color: white;
-  font-weight: bold;
-  background-color:#086788;
-  border-style: solid black;
-  border:4px;  
+	float: right;
+	color: white;
+	font-weight: bold;
+	background-color: #086788;
+	border-style: solid black;
+	border: 4px;
 }
+
 .radekseznamu1 {
-  float:left;
-  color: white;
-  font-weight: bold;
-  background-color:#086788;
-  border-style: solid black;
-  border:4px;  
+	float: left;
+	color: white;
+	font-weight: bold;
+	background-color: #086788;
+	border-style: solid black;
+	border: 4px;
 }
-.vyb_balicek{
-  float:right;
-  color: white;
-  font-weight: bold;
-  background-color:#086788;
-  border-style: solid;
-  border:4px;  
-  margin-right: 10px;
+
+.vyb_balicek {
+	float: right;
+	color: white;
+	font-weight: bold;
+	background-color: #086788;
+	border-style: solid;
+	border: 4px;
+	margin-right: 10px;
 }
+
 a {
-  color: #086788;
-  font-weight: bold;
-  text-decoration: none;
-  border-style: solid;
+	color: #086788;
+	font-weight: bold;
+	text-decoration: none;
+	border-style: solid;
 }
 
 #ul .nazevBalicku {
-	background-color:#07a0c3;
+	background-color: #07a0c3;
 	color: white;
-
 }
+
 .sloupec {
-  background-color:#086788;
-  color:white;
-  align-content: left;
-  font-family: sans-serif;
-  font-size: 24px;
-  height: 180px;
-  width: 230px;
-  margin: 0 5px;
-  border-radius: 50px;
-  border-style: solid sandybrown;
-  
+	background-color: #086788;
+	color: white;
+	align-content: left;
+	font-family: sans-serif;
+	font-size: 30px;
+	height: 180px;
+	width: 200px;
+	margin: 0 5px;
+	border-radius: 50px;
+	border-style: solid sandybrown;
 }
 
-.centrum{
-	text-align:center;
-	margin-left:auto;
-	margin-right:auto;
+.centrum {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 #canvas_back {
-  display:none;
+	display: none;
+	font-size: 30px;
+	height: 130px;
 }
 
-.kontrola{
-  display:none;
+#canvas_front {
+	font-size: 30px;
+		height: 130px;
+}
+
+.kontrola {
+	display: none;
 }
 
 /*body {
@@ -235,12 +260,49 @@ a {
   margin: 0;
   color: #444;
 }*/
+.button {
+	float: left;
+	padding: 0px 25px;
+	margin: 0px 5px;
+	font: 17px Verdana;
+	height: 50px;
+	line-height: 3em;
+	background-color: #034f84;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-align: left;
+}
+.button2 {
+	padding: 0px 25px;
+	margin-left: 450px;
+    font: 17px Verdana;
+	height: 50px;
+	line-height: 3em;
+	background-color: #034f84;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-align: left;
+}
+.button3 {
+	float: left;
+	padding: 0px 25px;
+	margin: 0px 5px;
+	font: 17px Verdana;
+	height: 30px;
+	line-height: 1,5em;
+	background-color: #034f84;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	text-align: left;
+}
 
 h1 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 30px;
-  text-align: center;
-  
+	font-family: "Open Sans", sans-serif;
+	font-size: 30px;
+	text-align: center;
 }
 /*
 header {

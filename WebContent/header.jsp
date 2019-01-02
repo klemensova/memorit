@@ -10,7 +10,7 @@
   </head>
   <body>
 
-<form action="MemoritServlet" method="get">
+<form action="MemoritServlet" method="post">
     <header>
 
  
@@ -21,8 +21,8 @@
         <li> <button  name="action" value="uvod">Úvodní stránka</button> </li>
         <li> <button name="action" value="vypisSeznam">Seznam balíčků</button></li>
         <li> <button name="action"  value="vyberKarticku">Kartičky</button></li>
-        <!-- <li> <button class="button2" name="action" value="doplnovani">Doplňování</button></li>
-        <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li> -->
+        <li> <button  name="action" value="doplnKarticku">Doplňování</button></li>
+        <!-- <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li> -->
         <li class="nazevBalicku"> 
 	        
 	        <% 

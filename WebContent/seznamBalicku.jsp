@@ -35,10 +35,13 @@
 					for (Balicek balicek : seznamBalicku.getBaliceklist()) {
 				%>
 				<li><%=balicek.getNazev_balicek()%>
-					<button class="radekseznamu" name="vytvorKarticku"
+					<button class="radekseznamu"name="smazatBalicek" value="<%=balicek.getId_balicek()%>">
+						Smazat balíček</button>
+					<button class="vyb_balicek" name="vytvorKarticku"
 						value="<%=balicek.getId_balicek()%>">Přidej kartičky</button>
 					<button class="vyb_balicek"name="vybratBalicek" value="<%=balicek.getId_balicek()%>">
 						Vybrat balíček</button>
+					
 					</li>
 				<%
 					}
