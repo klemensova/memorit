@@ -28,12 +28,12 @@
 	<%
 		if (session.getAttribute("nazev_balicek") != null) {
 	%>
-	<div class="stranka">
+	
 	<p>
 		<span class="balicek"><%=session.getAttribute("nazev_balicek")%></span>
 	</p>
 	<br/>
-	
+		<div class="stranka">
 	<div class="center" style="text-align: center;">
 		<div id="canvas_front"
 			style="background: #dcdddd; color:#444 ; width: 200px;  text-align: center; margin: auto; display: inline-block; padding: 40px; border-radius: 25%;" onclick="toggleCard();return false;">

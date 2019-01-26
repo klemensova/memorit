@@ -7,7 +7,7 @@ import cz.memorit.bean.Karticka;
 import cz.memorit.bean.SeznamKarticek;
 import cz.memorit.dao.MemoritDao;
 
-public class DoplnKartickuCtrl implements ControllerInterface {
+public class OpakDoplnKartickuCtrl implements ControllerInterface {
 	private MemoritDao instanceDao = new MemoritDao();
 
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
@@ -19,7 +19,7 @@ public class DoplnKartickuCtrl implements ControllerInterface {
 				request.getSession().setAttribute("doplnKarticku", doplnKarticku);
 			}
 		}
-		return "/doplnovani.jsp";
+		return "/opakdoplnovani.jsp";
 	}
 
 }

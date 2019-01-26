@@ -19,6 +19,19 @@
 	<div class="celyblok">
 		<p>Vytvoř kartičku</p>
 		<p>Vlož do políček slova tak, jak patří dvojice k sobě</p>
+		
+				<form action="MemoritServlet" method="get">
+			<p>
+				<label for="front_karta">Co neumím</label> 
+				<input type="text" name="front_karta" value="" /> 
+				<label for="back_karta">Co umím</label>
+				<input type="text" name="back_karta" value="" /> 
+			</p>
+			
+			<button type="submit" name="action" value="karticka" class="button3">Uložit</button>
+		</form>
+
+		<br /> <br /> 
 		<jsp:useBean id="seznamKarticek" scope="request"
 			class="cz.memorit.bean.SeznamKarticek" />
 		<%
@@ -34,18 +47,7 @@
 				<%
 			}
 		%>
-		<form action="MemoritServlet" method="get">
-			<p>
-				<label for="front_karta">Co neumím</label> 
-				<input type="text" name="front_karta" value="" /> 
-				<label for="back_karta">Co umím</label>
-				<input type="text" name="back_karta" value="" /> 
-			</p>
-			
-			<button type="submit" name="action" value="karticka" class="button3">Uložit</button>
-		</form>
 
-		<br /> <br /> <br /> <br /> <br />
 
 
 	</div>

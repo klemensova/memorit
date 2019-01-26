@@ -19,9 +19,9 @@ import cz.memorit.bean.SeznamKarticek;
 
 public class MemoritDao {
 	private static final String INSERTBALICEK = "INSERT INTO Balicek(nazev_balicek) VALUES (?)";
-	private static final String LOADSEZNAMBALICKU = "SELECT * FROM Balicek";
+	private static final String LOADSEZNAMBALICKU = "SELECT * FROM Balicek ORDER BY id_balicek DESC";
 	private static final String INSERTKARTA = "INSERT INTO Karta(front_karta, back_karta,id_balicek) VALUES (?,?,?)";
-	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta WHERE id_balicek = ?";
+	private static final String LOADSEZNAMKARTICEK = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY id_karta DESC";
 	private static final String LOADBALICEK = "SELECT * FROM Balicek WHERE id_balicek = ?";
 	private static final String LOADKARTICKA = "SELECT * FROM Karta WHERE id_balicek = ? ORDER BY RAND() LIMIT ?";
 	private static final String DELBALICEK = "DELETE FROM Balicek WHERE id_balicek = ?";
@@ -165,7 +165,7 @@ public class MemoritDao {
 	private DataSource getDataSource( ) {
 		try {
 			Context ctx = new InitialContext();
-			return (DataSource)ctx.lookup("java:/comp/env/procvicovacipomuckaResource");
+			return (DataSource)ctx.lookup("java:/comp/env/novy_memoritResource");
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}

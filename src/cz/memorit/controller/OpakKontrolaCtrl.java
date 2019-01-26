@@ -3,7 +3,7 @@ package cz.memorit.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class KontrolaCtrl  implements ControllerInterface {
+public class OpakKontrolaCtrl   implements ControllerInterface{
 
 	@Override
 	public String handle(HttpServletRequest request, HttpServletResponse response) {
@@ -15,18 +15,18 @@ public class KontrolaCtrl  implements ControllerInterface {
 					if (zadany != null && zadany.equals(zapsany)) {
 						odpoved ="ano";
 		                request.setAttribute("odpoved", odpoved);
-		           	return  "/MemoritServlet?action=doplnKarticku";
+		           	return  "/MemoritServlet?action=opakdoplnKarticku";
 					} else if (zadany != null && !zadany.equals(zapsany)) {
 						odpoved = "ne";
 				
 						request.setAttribute("odpoved", odpoved);
 						
-						return  "/doplnovani.jsp";
+						return  "/opakdoplnovani.jsp";
 						
 							}  else  {
 								odpoved = "neni";
 								request.setAttribute("odpoved", odpoved);
-								return  "/doplnovani.jsp";
+								return  "/opakdoplnovani.jsp";
 								}
 	
 			
@@ -34,5 +34,6 @@ public class KontrolaCtrl  implements ControllerInterface {
 		// TODO Auto-generated method stub
 
 	}
+	
 
 }

@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import cz.memorit.bean.Balicek;
 import cz.memorit.controller.DoplnKartickuCtrl;
 import cz.memorit.controller.KontrolaCtrl;
+import cz.memorit.controller.OpakDoplnKartickuCtrl;
+import cz.memorit.controller.OpakKontrolaCtrl;
 import cz.memorit.controller.SeznamBalickuCtrl;
 import cz.memorit.controller.SeznamKarticekCtrl;
 import cz.memorit.controller.SmazatBalicekCtrl;
@@ -80,9 +82,17 @@ public class MemoritServlet extends HttpServlet {
 		    	DoplnKartickuCtrl doplnKarticku = new DoplnKartickuCtrl();
 		    	redirect = doplnKarticku.handle(request,response);
 		    	break;
+		    case "opakdoplnKarticku":
+		    	OpakDoplnKartickuCtrl opakdoplnKarticku = new OpakDoplnKartickuCtrl();
+		    	redirect = opakdoplnKarticku.handle(request,response);
+		    	break;
 		    case"kontrola":
 		    	KontrolaCtrl kontrolaKarticky = new KontrolaCtrl();
 		    	redirect = kontrolaKarticky.handle(request, response);
+		    	break;
+		    case"opakkontrola":
+		    	OpakKontrolaCtrl opakkontrolaKarticky = new OpakKontrolaCtrl();
+		    	redirect = opakkontrolaKarticky.handle(request, response);
 		    	break;
 		}
 		

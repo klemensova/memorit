@@ -22,17 +22,13 @@
         <li> <button name="action" value="vypisSeznam">Seznam balíčků</button></li>
         <li> <button name="action"  value="vyberKarticku">Kartičky</button></li>
         <li> <button  name="action" value="doplnKarticku">Doplňování</button></li>
+        <li> <button  name="action" value="opakdoplnKarticku">Doplňování - opak</button></li> 
         <!-- <li>  <button class="button2" name="action"value="vyberPetKarticek">Přiřazování</button></li> -->
-        <li class="nazevBalicku"> 
+      <!--    <li class=""> 
 	        
-	        <% 
-	        	String nazevBalicku = (String)session.getAttribute("nazev_balicek");
-	        	if (nazevBalicku != null) {
-	        		out.print(nazevBalicku);
-	        	} 
-	       	%>
+	   
 	      
-       	</li>
+       	</li> -->
       </ul>
     </nav>
    

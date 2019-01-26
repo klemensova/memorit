@@ -10,6 +10,9 @@
   </head>
   <body>
      <%@ include file="header.jsp" %> 
+     <br/>
+     <br/>
+      
    
      <h1>
     Vítejte v aplikaci Memorit

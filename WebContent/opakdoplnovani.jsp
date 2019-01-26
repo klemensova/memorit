@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Doplňování</title>
+<title>Doplňování - opak</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 		<div class="sloupec" id="front_karta"
 			style="background: #dcdddd; color: #444; text-align: center; margin: 10px; display: inline-block; padding: 40px; border-radius: 25%; float: left;">
 			<br /> <br />
-			<jsp:getProperty name="doplnKarticku" property="front_karta" />
+			<jsp:getProperty name="doplnKarticku" property="back_karta" />
 
 
 		</div>
@@ -39,13 +39,13 @@
 
 
 		<input id="back_karta" type="text" name="dopln" class="sloupec"
-			style="background: #dcdddd; color: #444; text-align: center; margin: 10px; padding: 40px; border-radius: 25%; float: left;" autofocus/>
+			style="background: #dcdddd; color: #444; text-align: center; margin: 10px; padding: 40px; border-radius: 25%; float: left;" autofocus />
 		<br> <br> <input type="hidden" name="back_karta"
-			value="<jsp:getProperty name="doplnKarticku" property="back_karta" />" />
+			value="<jsp:getProperty name="doplnKarticku" property="front_karta" />" />
 
 
 		<div class="centrum">
-			<button name="action" value="kontrola" class="button">Je tvá
+			<button name="action" value="opakkontrola" class="button">Je tvá
 				odpověď správná?</button>
 			<p style="float: left; width: 300px">
 
@@ -73,7 +73,7 @@
 
 			<br>
 
-			<button name="action" value="doplnKarticku" class="button">Další</button>
+			<button name="action" value="opakdoplnKarticku" class="button">Další</button>
 		</div>
 	</form>
 

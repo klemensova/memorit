@@ -13,13 +13,20 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
+	
+	<p>
+		<span class="balicek"><% String jmenoBalicku = (String)session.getAttribute("nazev_balicek");
+	        	if (jmenoBalicku != null) {
+	        		out.print(jmenoBalicku);
+	        	}  else  {
+	        		out.print("Název vybraného balíčku");
+	        	}
+	       	%></span>
+	</p>
 
 	<br />
 	<br />
-	<br />
-	<br />
-	<br />
-	<br />
+	
 	<div class="celyblok">
 		<form action="MemoritServlet" method="get">
 			<p>
