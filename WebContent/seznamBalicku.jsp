@@ -13,7 +13,14 @@
 </head>
 <body>
 	<%@ include file="header.jsp"%>
+	<!--  
+	<script>
+				function myFunction() {
+					    window.alert("Opravdu chcete položku smazat?");
+				}
 	
+	</script>
+	-->
 	<p>
 		<span class="balicek"><% String jmenoBalicku = (String)session.getAttribute("nazev_balicek");
 	        	if (jmenoBalicku != null) {

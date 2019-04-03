@@ -27,6 +27,7 @@ public class MemoritDao {
 	private static final String DELBALICEK = "DELETE FROM Balicek WHERE id_balicek = ?";
 	
 	
+	
 	public void saveBalicek (Balicek novyBalicek) {
 		DataSource ds = getDataSource();
 		
@@ -165,7 +166,7 @@ public class MemoritDao {
 	private DataSource getDataSource( ) {
 		try {
 			Context ctx = new InitialContext();
-			return (DataSource)ctx.lookup("java:/comp/env/novy_memoritResource");
+            return (DataSource)ctx.lookup("java:/comp/env/procvicovacipomuckaResource");
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}

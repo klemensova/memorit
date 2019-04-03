@@ -74,6 +74,7 @@ public class MemoritServlet extends HttpServlet {
 		    case "uvod":
 		       redirect = "/index.jsp";	
 		    break;
+		 
 		    case "ulozitBalicek":
                 UlozitBalicekCtrl ulozBalicek = new UlozitBalicekCtrl();
                 redirect = ulozBalicek.handle(request,response);
@@ -96,23 +97,7 @@ public class MemoritServlet extends HttpServlet {
 		    	break;
 		}
 		
-		/*
-		 * 1) vzit parametr action
-		 * 2) pokud action == vybernebovytvor vezmeme parametry vybratBalicek a vytvorKarticku
-		 * 3)  podle toho, ktery parametr nebude null pustime controller
-		 * 4) Pokud nebude null vybratBalicek zavolam metodu handle z controlleru vybratBalicekCtrl
-		 * 5) metoda vrati /MemoritServlet?action="vypisSeznam" -> ulozit do redirect
-		 * 
-		 * switch (action)
-			{
-			    case "vypisSeznam":
-			        vypisSeznamCtrl.handle(request,response);
-			    break;
-			}
-		 * 
-		 * 
-		 * 
-		 */
+		
 		getServletConfig().getServletContext().getRequestDispatcher(redirect).forward(request, response);
 	}
 
